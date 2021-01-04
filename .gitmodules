@@ -2,3 +2,7 @@
 	path = kimai2
 	url = https://github.com/Andessy/kimai2.git
 	branch = master
+[submodule "ProjectOpen"]
+	path = ProjectOpen
+	url = https://github.com/Andessy/ProjectOpen.git
+	branch = master
