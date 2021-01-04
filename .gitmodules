@@ -1,0 +1,4 @@
+[submodule "kimai2"]
+	path = kimai2
+	url = https://github.com/Andessy/kimai2.git
+	branch = master
