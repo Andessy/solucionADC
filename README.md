@@ -21,7 +21,7 @@ En el caso del seguimiento y control, se esta utilizando una herramienta openSou
 Ejecución, se ha creado una aplicación KeyLogger elaborada en C++, con el objetivo que se pueda registrar las los eventos generados por la presion de las teclas y el click del mouse. Todos los datos se estan almacenando en una base de datos DynamoBD.
 Cierre, mes a mes se debe llevar el control de las horas ejecutadas por medio de reportes administrativos, para ello se esta utilizando el PowerBI como un generador de reportes.
 
-A nivel de tecnologias se esta utilizando una base de datos relacional MySQL que contiene toda la logica del negocio a nivel de datos alojado en AWS RDS, otra base datos no Relacional AWS Dynamo, los sistemas opensource estan siendo instalados en instancias AWS Fargate por medio de un compositor de contendores AWS ECS y las comunicaciones entre las bases de datos de las soluciones Opensource y la base de datos de la empresa se logra por un proceso ETL que esta alojado en una instancia de Fargate, el cual contiene un proceso batch ejecutado cada dia.
+A nivel de tecnologias se esta utilizando una base de datos relacional MySQL que contiene toda la logica del negocio a nivel de datos alojado en AWS RDS, otra base datos no Relacional AWS Dynamo, los sistemas opensource estan siendo instalados en instancias AWS Fargate por medio de un compositor de contendores AWS ECS. Tambien se debe resaltar que las comunicaciones entre las bases de datos de las soluciones Opensource y la base de datos de la empresa se logra por un proceso ETL que esta alojado en una instancia de Fargate, el cual contiene un proceso batch ejecutado cada dia.
 
 La arquitectura se presenta a continuación.
 
