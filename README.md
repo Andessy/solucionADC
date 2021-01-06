@@ -25,4 +25,4 @@ A nivel de tecnologias se esta utilizando una base de datos relacionan MySQL que
 
 La arquitectura se presenta a continuación.
 
-![Architecture Components](solucion ADC.jpg)
+![Architecture Components](solucionADC.jpg)
