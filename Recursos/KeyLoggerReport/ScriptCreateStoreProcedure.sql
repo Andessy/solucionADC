@@ -2,9 +2,9 @@ DELIMITER $$
 CREATE DEFINER=`root`@`%` PROCEDURE `TiemposMuertos`()
 BEGIN
 
-	drop temporary table ADC.grupoKey1;
-	drop temporary table ADC.grupoKey2;
-	drop table ADC.IddleTimes;
+	#drop temporary table ADC.grupoKey1;
+	#drop temporary table ADC.grupoKey2;
+	#drop table ADC.IddleTimes;
     
 	CREATE TEMPORARY TABLE ADC.grupoKey1(id MEDIUMINT NOT NULL AUTO_INCREMENT, 
     username VARCHAR(30) NOT NULL, 
@@ -28,11 +28,12 @@ BEGIN
     Username VARCHAR(30) NOT NULL, 
     Activity varchar(30),
     Iddletime int,
-    StartDate varchar (20) not null,
-    EndDate varchar(20) not null);
+    DateKey varchar (20) not null,
+    StartActivityDate varchar (20) not null,
+    EndActivityDate varchar(20) not null);
     
-	INSERT INTO ADC.IddleTimes (Username, Activity,Iddletime, StartDate,EndDate)
-    select d.username, d.activity, timestampdiff(MINUTE, STR_TO_DATE(g.datekey,'%Y%m%d%H%i') , STR_TO_DATE(d.datekey,'%Y%m%d%H%i')) , d.startdate, d.enddate
+	INSERT INTO ADC.IddleTimes (Username, Activity,Iddletime,DateKey, StartActivityDate,EndActivityDate)
+    select d.username, d.activity, timestampdiff(MINUTE, STR_TO_DATE(g.datekey,'%Y%m%d%H%i') , STR_TO_DATE(d.datekey,'%Y%m%d%H%i')) ,d.datekey, d.startdate, d.enddate
     from ADC.grupoKey1 d
     left outer join ADC.grupoKey2 g 
     on d.id =g.id+1 and d.username = g.username;
